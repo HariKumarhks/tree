@@ -1,0 +1,38 @@
+<div>TODO, Fix `Deselect All` Bug</div>
+
+<div style="margin-bottom: 1rem">
+  <button
+    pButton
+    type="button"
+    label="Expand all"
+    (click)="expandAll()"
+    style="margin-right: 0.5rem"
+  ></button>
+  <button
+    pButton
+    type="button"
+    label="Collapse all"
+    (click)="collapseAll()"
+    style="margin-right: 2rem"
+  ></button>
+  <button
+    pButton
+    type="button"
+    label="Select all"
+    (click)="selectAll()"
+    style="margin-right: 0.5rem"
+  ></button>
+  <button
+    pButton
+    type="button"
+    label="Deselect all"
+    (click)="deselectAll()"
+    [disabled]="enableBtn()"
+  ></button>
+</div>
+<p-tree
+  [value]="jsonTree"
+  selectionMode="checkbox"
+  (click)="selected()"
+  [(selection)]="selectedFiles"
+></p-tree>
